@@ -1,0 +1,123 @@
+<section *ngIf="Filterlist ==='product'" class="list-view">
+    <div *ngFor="let subCategory of subCategories"  class="card" style="max-width: 100;">
+      <img class="card-img-top" [src] = 'imageUrl' [routerLink]="['/getSeries',id,'series']" alt="Product pic">
+      <div class="card-body">
+        <h5 class="card-title">
+          <a [routerLink]="['/getSeries',subCategory.id,'series']">{{title}}</a>
+        </h5>
+  
+        <p  class="card-text">{{description}}</p>
+      </div>
+    </div>
+  </section>
+  <section *ngIf="Filterlist === 'series'" class="list-view">
+
+      <div *ngFor="let subCategory of subCategories"  class="card" style="width: 300px;max-width: 19rem; height: 300px">
+        <img class="card-img-top" [src]=subCategory.imageUrl alt="Product pic">
+        <div class="card-body">
+          <h5 class="card-title">
+            <a [routerLink]="['/getConfiguration',subCategory.id,'series']">{{subCategory.name}}</a>
+          </h5>
+          <h4>
+            <p>Starting @ Rs.{{subCategory.price}}</p>
+          </h4>
+          <p class="card-text">{{subCategory.description}}</p>
+        </div>
+        <hr>
+      </div>
+    </section> 
+
+
+<!-- <div *ngIf="Filterlist=='group'" class="card" style="width: 300px;max-width: 19rem; height: 300px">
+  <img class="card-img-top" [src]=imageUrl [routerLink]="['/getproducts',id,'product']" alt="Product Group pic">
+  <div class="card-body">
+    <h5 class="card-title">
+      <a [routerLink]="['/getproducts',id,'product']">{{title}}</a>
+    </h5>
+
+    <p class="card-text">{{description}}</p>
+
+  </div>
+</div>
+
+<section *ngIf="Filterlist=='product'" class="list-view">
+  <div *ngFor="let subCategory of subCategories" class="card" style="max-width: 18rem;">
+    <img class="card-img-top" [src] = 'imageUrl' [routerLink]="['/getSeries',id,'series']" alt="Product pic">
+    <div class="card-body">
+      <h5 class="card-title">
+        <a [routerLink]="['/getSeries',id,'series']">{{subCategory.name}}</a>
+      </h5>
+
+      <p class="card-text">{{subCategory.description}}</p>
+    </div>
+  </div>
+</section>
+
+<section *ngIf="Filterlist=='series'" class="list-view">
+
+  <div *ngFor="let subCategory of subCategories" class="card" style="width: 300px;max-width: 19rem; height: 300px">
+    <img class="card-img-top" [src]=subCategory.imageUrl (click)="confirm(id)" alt="Product pic">
+    <div class="card-body">
+      <h5 class="card-title">
+        <a (click)="confirm(id)" [routerLink]="['/getSeries',id,'series']">{{subCategory.name}}</a>
+      </h5>
+      <h4>
+        <p>Starting @ Rs.{{subCategory.price}}</p>
+      </h4>
+      <p class="card-text">{{subCategory.description}}</p>
+    </div>
+    <hr>
+  </div>
+</section> -->
+
+<!-- <section *ngIf="Filterlist=='model'" class="list-view">
+  <div *ngFor="let subCategory of subCategories" class="card" style="max-width: 18rem;">
+    <img class="card-img-top" [src]=subCategory.imageUrl [routerLink]="['/getModels',1,'model']" alt="Product pic">
+    <div class="card-body">
+      <h5 class="card-title">
+        <a>{{subCategory.name}}</a>
+        <h4>
+          <p>Starting @ Rs.{{subCategory.price}}</p>
+        </h4>
+        <p class="card-text">{{subCategory.description}}</p>
+    </div>
+</section> -->
+<!-- <button id="openModalButton" style="visibility: hidden" data-toggle="modal" data-target='#aaa'>Open Modal</button>
+<div class="modal fade" id="aaa" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" style="max-width:95%;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h6 class="modal-title" id="exampleModalLongTitle">Model details</h6>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="modal-body" style="padding:0px;">
+          <div class="card" style="margin-top: 0px;">
+
+            <section *ngIf="Filterlist=='series'" class="list-view">
+              <div *ngFor="let subCategory of subCategories2">
+                <div *ngFor="let subCat of subCategory.subCategories" class="card"
+                  style="float: left; height: 400px;width: 200px;margin: 10px;">
+                  <img class="card-img-top" [src]="subCat.imageUrl" alt="Model pic">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      <a>
+                        {{subCat.name}}
+                      </a>
+                    </h5>
+                    <h4>
+                      <p>Starting @ Rs.{{subCat.price}}</p>
+                    </h4>
+                    <p class="card-text">{{subCat.description</p>
+            </div>
+
+            </div>
+        </section>
+        </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+
+    </div>
+</div>  -->

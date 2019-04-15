@@ -1,0 +1,12 @@
+<div *ngFor = "let product of configDetails">
+  <div>{{product.categoryType}}</div>
+  <div *ngFor = "let productList of product.values">
+    <div>
+      <span> {{productList.name}}</span> : <span>{{productList.price}}</span> 
+      <input type="radio" name = {{product.categoryType}}
+       (click)="totalCalculation(productList, product.categoryType)">
+    </div>
+  </div>
+</div>
+
+<div><span>Total :</span> <span>{{total}}</span> </div>

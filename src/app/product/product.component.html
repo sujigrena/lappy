@@ -1,0 +1,22 @@
+<section>
+    <Div class="container">
+        <div class="row" classs="row" style="margin-top: 15;">
+        <div class="col">
+            <div class="card-deck">
+
+                <app-product-card *ngFor = "let product of product$"
+                    [id] = "product.id"
+                    [imageUrl] = "product.imageUrl"
+                    [title] = "product.title"
+                    [description] = "product.description"
+                    [subCategories] = "product.subCategories"
+                    [Filterlist] = "filterdata" > 
+                </app-product-card>
+            </div>
+        </div>
+
+        </div>
+
+    </Div>
+  
+</section>

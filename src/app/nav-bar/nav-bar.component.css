@@ -1,0 +1,20 @@
+.nav {
+    color: white;
+    background-color: #de3939;
+    padding: 12px;
+    font-size: 25px; 
+  }
+
+  .nav-container {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 10px;
+  }
+
+  .nav-container > div {
+    background-color: #de3939;
+    width: 100px;
+    text-align: center;
+    line-height: 35px;
+    font-size: 18px;
+  }
